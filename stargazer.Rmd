@@ -376,10 +376,11 @@ stargazer(output, output2, type = "html", omit = "quarter")
 Add the `omit.labels` parameter to report which variables have been omitted. 
 Must be the same length as the number of regular expressions supplied to `omit`.
 By default `omit.labels` reports "Yes" or "No". To change this supply 
-a new vector of length 2 to `omit.yes.no = c("Yes", "No")`.
+a new vector of length 2 to `omit.yes.no = c("Yes", "No")`. **Changing the order
+of the models fixes the issue/bug [omit labels](https://github.com/JakeRuss/cheatsheets/issues/6).**
 
 ```{r, echo = TRUE, warning = FALSE, message = FALSE, results='asis'}
-stargazer(output, output2, type = "html", 
+stargazer(output2, output, type = "html", 
           omit        = "quarter",
           omit.labels = "Quarter dummies?")
 ```

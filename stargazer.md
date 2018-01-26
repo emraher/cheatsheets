@@ -1,5 +1,13 @@
-# A Stargazer Cheatsheet
-Updated `r format(Sys.time(), '%d %B, %Y')`  
+---
+title: "A Stargazer Cheatsheet"
+date: "Updated 26 January, 2018"
+output: 
+  html_document:
+    theme: spacelab
+    keep_md: true
+    toc: yes
+    highlight: haddock
+---
 
 ## Dataset: dplyr and nycflights13
 
@@ -85,14 +93,14 @@ summary(output)
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -26.201  -8.497  -3.533   4.708  75.727 
+## -26.201  -8.496  -3.533   4.708  75.727 
 ## 
 ## Coefficients:
 ##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)  7.26298    3.09879   2.344   0.0196 *  
-## temp         0.08808    0.04068   2.165   0.0310 *  
-## wind         0.16648    0.16392   1.016   0.3105    
-## precip      18.91805    3.24948   5.822 1.29e-08 ***
+## (Intercept)  7.26300    3.09886   2.344   0.0196 *  
+## temp         0.08809    0.04068   2.165   0.0310 *  
+## wind         0.16643    0.16392   1.015   0.3106    
+## precip      18.91808    3.24948   5.822 1.29e-08 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
@@ -112,23 +120,23 @@ summary(output2)
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -26.927  -8.740  -3.937   5.181  74.631 
+## -26.927  -8.741  -3.937   5.181  74.631 
 ## 
 ## Coefficients:
 ##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)  6.14163    3.53599   1.737  0.08327 .  
-## temp         0.18396    0.06856   2.683  0.00763 ** 
-## wind         0.11445    0.16357   0.700  0.48459    
-## precip      18.16739    3.22973   5.625 3.75e-08 ***
-## quarter2    -2.26471    2.66038  -0.851  0.39519    
-## quarter3    -7.52596    3.22585  -2.333  0.02020 *  
-## quarter4    -4.75737    2.10380  -2.261  0.02434 *  
+## (Intercept)  6.14120    3.53607   1.737  0.08330 .  
+## temp         0.18400    0.06856   2.684  0.00762 ** 
+## wind         0.11437    0.16358   0.699  0.48489    
+## precip      18.16741    3.22972   5.625 3.75e-08 ***
+## quarter2    -2.26575    2.66044  -0.852  0.39498    
+## quarter3    -7.52745    3.22594  -2.333  0.02018 *  
+## quarter4    -4.75787    2.10382  -2.262  0.02433 *  
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 13.12 on 357 degrees of freedom
-## Multiple R-squared:  0.1218,	Adjusted R-squared:  0.107 
-## F-statistic: 8.253 on 6 and 357 DF,  p-value: 2.221e-08
+## Multiple R-squared:  0.1218,	Adjusted R-squared:  0.1071 
+## F-statistic: 8.253 on 6 and 357 DF,  p-value: 2.219e-08
 ```
 
 ```r
@@ -143,13 +151,13 @@ summary(output3)
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -25.739  -8.929  -3.834   5.015  74.767 
+## -25.739  -8.929  -3.834   5.016  74.767 
 ## 
 ## Coefficients:
 ##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)  10.7297     9.1384   1.174    0.241    
+## (Intercept)  10.7302     9.1385   1.174    0.241    
 ## temp          0.0342     0.1397   0.245    0.807    
-## wind          0.1157     0.2070   0.559    0.577    
+## wind          0.1156     0.2070   0.559    0.577    
 ## precip       18.8775     3.2589   5.793 1.51e-08 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -220,12 +228,12 @@ stargazer(both2, type = "html", summary = FALSE, rownames = FALSE)
 
 
 <table style="text-align:center"><tr><td colspan="9" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">year</td><td>month</td><td>day</td><td>delay</td><td>temp</td><td>wind</td><td>precip</td><td>quarter</td><td>hot</td></tr>
-<tr><td colspan="9" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">2,013</td><td>1</td><td>1</td><td>17.484</td><td>38.480</td><td>12.759</td><td>0</td><td>1</td><td>FALSE</td></tr>
-<tr><td style="text-align:left">2,013</td><td>1</td><td>2</td><td>25.323</td><td>28.835</td><td>12.515</td><td>0</td><td>1</td><td>FALSE</td></tr>
-<tr><td style="text-align:left">2,013</td><td>1</td><td>3</td><td>8.450</td><td>29.457</td><td>7.864</td><td>0</td><td>1</td><td>FALSE</td></tr>
-<tr><td style="text-align:left">2,013</td><td>1</td><td>4</td><td>12.104</td><td>33.477</td><td>13.857</td><td>0</td><td>1</td><td>FALSE</td></tr>
-<tr><td style="text-align:left">2,013</td><td>1</td><td>5</td><td>5.696</td><td>36.733</td><td>10.837</td><td>0</td><td>1</td><td>FALSE</td></tr>
-<tr><td style="text-align:left">2,013</td><td>1</td><td>6</td><td>12.383</td><td>37.970</td><td>8.008</td><td>0</td><td>1</td><td>FALSE</td></tr>
+<tr><td colspan="9" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">2013</td><td>1</td><td>1</td><td>17.4835526315789</td><td>38.48</td><td>12.758647826087</td><td>0</td><td>1</td><td>FALSE</td></tr>
+<tr><td style="text-align:left">2013</td><td>1</td><td>2</td><td>25.3226744186047</td><td>28.835</td><td>12.5147325</td><td>0</td><td>1</td><td>FALSE</td></tr>
+<tr><td style="text-align:left">2013</td><td>1</td><td>3</td><td>8.45045045045045</td><td>29.4575</td><td>7.86366333333333</td><td>0</td><td>1</td><td>FALSE</td></tr>
+<tr><td style="text-align:left">2013</td><td>1</td><td>4</td><td>12.1038575667656</td><td>33.4775</td><td>13.8573091666667</td><td>0</td><td>1</td><td>FALSE</td></tr>
+<tr><td style="text-align:left">2013</td><td>1</td><td>5</td><td>5.69620253164557</td><td>36.7325</td><td>10.8365116666667</td><td>0</td><td>1</td><td>FALSE</td></tr>
+<tr><td style="text-align:left">2013</td><td>1</td><td>6</td><td>12.3833333333333</td><td>37.97</td><td>8.00751083333333</td><td>0</td><td>1</td><td>FALSE</td></tr>
 <tr><td colspan="9" style="border-bottom: 1px solid black"></td></tr></table>
 
 ### Remove row and column names
@@ -238,12 +246,12 @@ stargazer(both2, type = "html", summary = FALSE,
 ```
 
 
-<table style="text-align:center"><tr><td colspan="9" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">2,013</td><td>1</td><td>1</td><td>17.484</td><td>38.480</td><td>12.759</td><td>0</td><td>1</td><td>FALSE</td></tr>
-<tr><td style="text-align:left">2,013</td><td>1</td><td>2</td><td>25.323</td><td>28.835</td><td>12.515</td><td>0</td><td>1</td><td>FALSE</td></tr>
-<tr><td style="text-align:left">2,013</td><td>1</td><td>3</td><td>8.450</td><td>29.457</td><td>7.864</td><td>0</td><td>1</td><td>FALSE</td></tr>
-<tr><td style="text-align:left">2,013</td><td>1</td><td>4</td><td>12.104</td><td>33.477</td><td>13.857</td><td>0</td><td>1</td><td>FALSE</td></tr>
-<tr><td style="text-align:left">2,013</td><td>1</td><td>5</td><td>5.696</td><td>36.733</td><td>10.837</td><td>0</td><td>1</td><td>FALSE</td></tr>
-<tr><td style="text-align:left">2,013</td><td>1</td><td>6</td><td>12.383</td><td>37.970</td><td>8.008</td><td>0</td><td>1</td><td>FALSE</td></tr>
+<table style="text-align:center"><tr><td colspan="9" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">2013</td><td>1</td><td>1</td><td>17.4835526315789</td><td>38.48</td><td>12.758647826087</td><td>0</td><td>1</td><td>FALSE</td></tr>
+<tr><td style="text-align:left">2013</td><td>1</td><td>2</td><td>25.3226744186047</td><td>28.835</td><td>12.5147325</td><td>0</td><td>1</td><td>FALSE</td></tr>
+<tr><td style="text-align:left">2013</td><td>1</td><td>3</td><td>8.45045045045045</td><td>29.4575</td><td>7.86366333333333</td><td>0</td><td>1</td><td>FALSE</td></tr>
+<tr><td style="text-align:left">2013</td><td>1</td><td>4</td><td>12.1038575667656</td><td>33.4775</td><td>13.8573091666667</td><td>0</td><td>1</td><td>FALSE</td></tr>
+<tr><td style="text-align:left">2013</td><td>1</td><td>5</td><td>5.69620253164557</td><td>36.7325</td><td>10.8365116666667</td><td>0</td><td>1</td><td>FALSE</td></tr>
+<tr><td style="text-align:left">2013</td><td>1</td><td>6</td><td>12.3833333333333</td><td>37.97</td><td>8.00751083333333</td><td>0</td><td>1</td><td>FALSE</td></tr>
 <tr><td colspan="9" style="border-bottom: 1px solid black"></td></tr></table>
 
 ### Change which statistics are displayed
@@ -351,23 +359,23 @@ stargazer(output, output2, type = "html")
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -396,23 +404,23 @@ stargazer(output, output2, type = "html", style = "qje")
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td style="text-align:left"><em>N</em></td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Notes:</em></td><td colspan="2" style="text-align:right"><sup>***</sup>Significant at the 1 percent level.</td></tr>
 <tr><td style="text-align:left"></td><td colspan="2" style="text-align:right"><sup>**</sup>Significant at the 5 percent level.</td></tr>
 <tr><td style="text-align:left"></td><td colspan="2" style="text-align:right"><sup>*</sup>Significant at the 10 percent level.</td></tr>
@@ -450,23 +458,23 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">Rain (inches)</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">2nd quarter</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">2nd quarter</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">3rd quarter</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">3rd quarter</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Fourth quarter</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">Fourth quarter</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -494,23 +502,23 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -539,23 +547,23 @@ stargazer(output, output2, type = "html", column.labels = c("Good", "Better"))
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -588,23 +596,23 @@ stargazer(output, output, output2, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.249)</td><td>(3.230)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td></td><td>-2.265</td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td></td><td>-2.266</td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td>(2.660)</td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td></td><td>-7.526<sup>**</sup></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td></td><td>-7.527<sup>**</sup></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td>(3.226)</td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td></td><td>-4.757<sup>**</sup></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td></td><td>-4.758<sup>**</sup></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td>(2.104)</td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.099)</td><td>(3.536)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td></td><td></td></tr>
 <tr><td colspan="5" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.097</td><td>0.122</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.089</td><td>0.107</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="5" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="4" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -635,23 +643,23 @@ stargazer(output, output2, output3, type = "html")
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td><td>18.877<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td><td>(3.259)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td><td></td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td><td></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td><td></td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td><td></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td><td></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td><td></td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td><td></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td><td></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td><td></td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td><td>10.730</td></tr>
-<tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td><td>(9.138)</td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td><td>10.730</td></tr>
+<tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td><td>(9.139)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
 <tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td><td>0.093</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td><td>0.085</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td><td>13.280 (df = 360)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td><td></td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td><td></td></tr>
 <tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="3" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -684,23 +692,23 @@ stargazer(output, output2, output3, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td><td>18.877<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td><td>(3.259)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td><td></td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td><td></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td><td></td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td><td></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td><td></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td><td></td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td><td></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td><td></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td><td></td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td><td>10.730</td></tr>
-<tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td><td>(9.138)</td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td><td>10.730</td></tr>
+<tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td><td>(9.139)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
 <tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td><td>0.093</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td><td>0.085</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td><td>13.280 (df = 360)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td><td></td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td><td></td></tr>
 <tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="3" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -729,16 +737,16 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Fixed effects?</td><td>No</td><td>No</td></tr>
@@ -747,7 +755,7 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -774,23 +782,23 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -818,31 +826,31 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left"></td><td colspan="2">delay</td></tr>
 <tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">temp</td><td>0.088</td><td>0.184</td></tr>
-<tr><td style="text-align:left"></td><td>t = 2.165<sup>**</sup></td><td>t = 2.683<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td>t = 2.165<sup>**</sup></td><td>t = 2.684<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td style="text-align:left">wind</td><td>0.166</td><td>0.114</td></tr>
-<tr><td style="text-align:left"></td><td>t = 1.016</td><td>t = 0.700</td></tr>
+<tr><td style="text-align:left"></td><td>t = 1.015</td><td>t = 0.699</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td style="text-align:left">precip</td><td>18.918</td><td>18.167</td></tr>
 <tr><td style="text-align:left"></td><td>t = 5.822<sup>***</sup></td><td>t = 5.625<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
-<tr><td style="text-align:left"></td><td></td><td>t = -0.851</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
+<tr><td style="text-align:left"></td><td></td><td>t = -0.852</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526</td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>t = -2.333<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757</td></tr>
-<tr><td style="text-align:left"></td><td></td><td>t = -2.261<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758</td></tr>
+<tr><td style="text-align:left"></td><td></td><td>t = -2.262<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263</td><td>6.142</td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263</td><td>6.141</td></tr>
 <tr><td style="text-align:left"></td><td>t = 2.344<sup>**</sup></td><td>t = 1.737<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -868,23 +876,23 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(12.549, 25.287)</td><td>(11.837, 24.498)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
-<tr><td style="text-align:left"></td><td></td><td>(-7.479, 2.950)</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
+<tr><td style="text-align:left"></td><td></td><td>(-7.480, 2.949)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
-<tr><td style="text-align:left"></td><td></td><td>(-13.849, -1.203)</td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
+<tr><td style="text-align:left"></td><td></td><td>(-13.850, -1.205)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(-8.881, -0.634)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(1.189, 13.337)</td><td>(-0.789, 13.072)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -908,28 +916,28 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left"></td><td>(0.021 @@ 0.155)</td><td>(0.071 @@ 0.297)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td style="text-align:left">wind</td><td>0.166</td><td>0.114</td></tr>
-<tr><td style="text-align:left"></td><td>(-0.103 @@ 0.436)</td><td>(-0.155 @@ 0.384)</td></tr>
+<tr><td style="text-align:left"></td><td>(-0.103 @@ 0.436)</td><td>(-0.155 @@ 0.383)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(13.573 @@ 24.263)</td><td>(12.855 @@ 23.480)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
-<tr><td style="text-align:left"></td><td></td><td>(-6.641 @@ 2.111)</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
+<tr><td style="text-align:left"></td><td></td><td>(-6.642 @@ 2.110)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
-<tr><td style="text-align:left"></td><td></td><td>(-12.832 @@ -2.220)</td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
+<tr><td style="text-align:left"></td><td></td><td>(-12.834 @@ -2.221)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(-8.218 @@ -1.297)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(2.166 @@ 12.360)</td><td>(0.325 @@ 11.958)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -1006,7 +1014,7 @@ stargazer(output, output2, type = "html",
 <tr><td></td><td colspan="2" style="border-bottom: 1px solid black"></td></tr>
 <tr><td style="text-align:left"></td><td colspan="2">delay</td></tr>
 <tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td></tr>
-<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td style="text-align:left">temp</td><td>0.088<sup>**</sup></td><td>0.184<sup>***</sup></td></tr>
@@ -1018,20 +1026,20 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -1055,15 +1063,15 @@ stargazer(output, output2, type = "html",
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">temp</td><td>0.088<sup>**</sup> (0.041)</td><td>0.184<sup>***</sup> (0.069)</td></tr>
 <tr><td style="text-align:left">wind</td><td>0.166 (0.164)</td><td>0.114 (0.164)</td></tr>
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup> (3.249)</td><td>18.167<sup>***</sup> (3.230)</td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265 (2.660)</td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup> (3.226)</td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup> (2.104)</td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup> (3.099)</td><td>6.142<sup>*</sup> (3.536)</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266 (2.660)</td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup> (3.226)</td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup> (2.104)</td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup> (3.099)</td><td>6.141<sup>*</sup> (3.536)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -1095,14 +1103,14 @@ stargazer(output, output2, type = "html", omit = "quarter")
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -1111,11 +1119,12 @@ stargazer(output, output2, type = "html", omit = "quarter")
 Add the `omit.labels` parameter to report which variables have been omitted. 
 Must be the same length as the number of regular expressions supplied to `omit`.
 By default `omit.labels` reports "Yes" or "No". To change this supply 
-a new vector of length 2 to `omit.yes.no = c("Yes", "No")`.
+a new vector of length 2 to `omit.yes.no = c("Yes", "No")`. **Changing the order
+of the models fixes the issue/bug [omit labels](https://github.com/JakeRuss/cheatsheets/issues/6).**
 
 
 ```r
-stargazer(output, output2, type = "html", 
+stargazer(output2, output, type = "html", 
           omit        = "quarter",
           omit.labels = "Quarter dummies?")
 ```
@@ -1125,24 +1134,24 @@ stargazer(output, output2, type = "html",
 <tr><td></td><td colspan="2" style="border-bottom: 1px solid black"></td></tr>
 <tr><td style="text-align:left"></td><td colspan="2">delay</td></tr>
 <tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td></tr>
-<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">temp</td><td>0.088<sup>**</sup></td><td>0.184<sup>***</sup></td></tr>
-<tr><td style="text-align:left"></td><td>(0.041)</td><td>(0.069)</td></tr>
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">temp</td><td>0.184<sup>***</sup></td><td>0.088<sup>**</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(0.069)</td><td>(0.041)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">wind</td><td>0.166</td><td>0.114</td></tr>
+<tr><td style="text-align:left">wind</td><td>0.114</td><td>0.166</td></tr>
 <tr><td style="text-align:left"></td><td>(0.164)</td><td>(0.164)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
-<tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
+<tr><td style="text-align:left">precip</td><td>18.167<sup>***</sup></td><td>18.918<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(3.230)</td><td>(3.249)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
-<tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
+<tr><td style="text-align:left">Constant</td><td>6.141<sup>*</sup></td><td>7.263<sup>**</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(3.536)</td><td>(3.099)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Quarter dummies?</td><td>No</td><td>No</td></tr>
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Quarter dummies?</td><td>Yes</td><td>No</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
-<tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
-<tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
-<tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">R<sup>2</sup></td><td>0.122</td><td>0.097</td></tr>
+<tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.107</td><td>0.089</td></tr>
+<tr><td style="text-align:left">Residual Std. Error</td><td>13.119 (df = 357)</td><td>13.248 (df = 360)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>8.253<sup>***</sup> (df = 6; 357)</td><td>12.880<sup>***</sup> (df = 3; 360)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -1169,16 +1178,16 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
@@ -1217,16 +1226,16 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr></table>
@@ -1258,16 +1267,16 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr></table>
@@ -1294,23 +1303,23 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248</td><td>13.119</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup></td><td>8.253<sup>***</sup></td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup></td><td>8.253<sup>***</sup></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -1343,23 +1352,23 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>@@@</sup></td><td>18.167<sup>@@@</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>@@</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>@@</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>@@</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>@@</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>@@</sup></td><td>6.142<sup>@</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>@@</sup></td><td>6.141<sup>@</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>@@@</sup> (df = 3; 360)</td><td>8.253<sup>@@@</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>@@@</sup> (df = 3; 360)</td><td>8.253<sup>@@@</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -1388,23 +1397,23 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>*</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>*</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>*</sup></td><td>6.142</td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>*</sup></td><td>6.141</td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.05; <sup>**</sup>p<0.01; <sup>***</sup>p<0.001</td></tr>
 </table>
 
@@ -1435,23 +1444,23 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 <tr><td style="text-align:left"></td><td colspan="2" style="text-align:right">I make this look good!</td></tr>
 </table>
@@ -1479,23 +1488,23 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right">Sometimes you just have to start over.</td></tr>
 </table>
 
@@ -1521,23 +1530,23 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:left"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -1563,23 +1572,23 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">New note label</td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -1614,23 +1623,23 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -1656,23 +1665,23 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18,918<sup>***</sup></td><td>18,167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3,249)</td><td>(3,230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2,265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2,266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2,660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7,526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7,527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3,226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4,757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4,758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2,104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7,263<sup>**</sup></td><td>6,142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7,263<sup>**</sup></td><td>6,141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3,099)</td><td>(3,536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0,097</td><td>0,122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0,089</td><td>0,107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13,248 (df = 360)</td><td>13,119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12,879<sup>***</sup> (df = 3; 360)</td><td>8,253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12,880<sup>***</sup> (df = 3; 360)</td><td>8,253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0,1; <sup>**</sup>p<0,05; <sup>***</sup>p<0,01</td></tr>
 </table>
 
@@ -1791,23 +1800,23 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.249)</td><td>(3.230)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>.097</td><td>.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>.089</td><td>.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -1826,13 +1835,13 @@ stargazer(output, output2, type = "html",
 <tr><td></td><td colspan="2" style="border-bottom: 1px solid black"></td></tr>
 <tr><td style="text-align:left"></td><td colspan="2">delay</td></tr>
 <tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td></tr>
-<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">quarter2</td><td></td><td>-2.265</td></tr>
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">quarter2</td><td></td><td>-2.266</td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.660)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter3</td><td></td><td>-7.526<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter3</td><td></td><td>-7.527<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(3.226)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">quarter4</td><td></td><td>-4.757<sup>**</sup></td></tr>
+<tr><td style="text-align:left">quarter4</td><td></td><td>-4.758<sup>**</sup></td></tr>
 <tr><td style="text-align:left"></td><td></td><td>(2.104)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td style="text-align:left">precip</td><td>18.918<sup>***</sup></td><td>18.167<sup>***</sup></td></tr>
@@ -1844,14 +1853,14 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">temp</td><td>0.088<sup>**</sup></td><td>0.184<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(0.041)</td><td>(0.069)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
-<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.142<sup>*</sup></td></tr>
+<tr><td style="text-align:left">Constant</td><td>7.263<sup>**</sup></td><td>6.141<sup>*</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(3.099)</td><td>(3.536)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>364</td><td>364</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
@@ -1879,7 +1888,7 @@ stargazer(output, output2, type = "html",
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.097</td><td>0.122</td></tr>
 <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.107</td></tr>
 <tr><td style="text-align:left">Residual Std. Error</td><td>13.248 (df = 360)</td><td>13.119 (df = 357)</td></tr>
-<tr><td style="text-align:left">F Statistic</td><td>12.879<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>12.880<sup>***</sup> (df = 3; 360)</td><td>8.253<sup>***</sup> (df = 6; 357)</td></tr>
 <tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 </table>
 
